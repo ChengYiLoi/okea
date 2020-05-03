@@ -1,0 +1,95 @@
+.itemWrapper {
+  width: 70vw;
+  margin: 80px auto 0px;
+  display: flex;
+  flex-direction: column;
+  .back {
+    font-size: larger;
+    min-width: 20%;
+    margin: 10px auto 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  .itemContent {
+    display: grid;
+    grid-template-areas:
+      "img input"
+      "description description";
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10px;
+  }
+  .img {
+    justify-self: center;
+    grid-area: img;
+    width: 80%;
+    -webkit-box-shadow: 4px 0px 3px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 4px 0px 3px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 4px 0px 3px 1px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    margin: 2px 0px;
+  }
+  .informationSection {
+    padding-top: 10%;
+    grid-area: input;
+    
+    h2 {
+      font-size: 28px;
+    }
+    form {
+      padding: 12px 0px;
+      .counter {
+        width: fit-content;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 0.5px solid #f0a148;
+        border-radius: 10px;
+        button {
+          padding: 12px 24px;
+        }
+        span {
+          width: 100%;
+          text-align: center;
+          padding: 0px 36px;
+        }
+      }
+      button,
+      i,
+      span {
+        font-size: 32px;
+      }
+      button {
+        padding: 12px;
+        transition: all 0.3s linear;
+        div{
+          background-color: inherit;
+        }
+        i {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  #decrement {
+    border-top-right-radius: unset !important;
+    border-bottom-right-radius: unset !important;
+  }
+  #increment {
+    border-bottom-left-radius: unset !important;
+    border-top-left-radius: unset !important;
+  }
+  .itemDescription {
+    padding: 8% 0%;
+    grid-area: description;
+    font-size: 20px;
+    h4 {
+      border-top: 2px solid grey;
+      padding: 12px 0px;
+    }
+  }
+}
+.itemWrapper > .orangeButton{
+  text-align: center;
+  margin: 10px;
+}

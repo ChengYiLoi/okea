@@ -1,0 +1,23 @@
+.guestWrapper{
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    margin: 0px auto;
+    background-color: #ccc9c9;
+    form{
+        padding: 20px;
+        width: 100%;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+      
+        button{
+            width: 50%;
+            margin: 0px auto;
+        }
+    }
+}

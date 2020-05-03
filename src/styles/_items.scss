@@ -1,0 +1,82 @@
+.mainWrapper {
+  width: 60vw;
+  margin: 0px auto;
+  .itemContent {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+    a {
+      display: flex;
+      .itemCard {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .itemCard {
+      cursor: pointer;
+      border: 2px solid rgb(192, 187, 187);
+      border-bottom: 0px none transparent;
+      border-radius: 10px;
+      border-bottom: 10px solid rgb(240, 187, 13);
+      transition: transform 0.3s linear;
+      &:hover {
+        transform: scale(1.03);
+      }
+      img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .itemInformation {
+        color: black;
+        padding: 10px 0px 10px 10px;
+        background-color: rgba(215, 223, 235, 0.87);
+        height: 100%;
+        .shortDescription {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .pageNavigation {
+    display: flex;
+    padding: 50px;
+    justify-content: space-evenly;
+
+    margin: 0px auto;
+    width: 100%;
+
+    .hideButton {
+      display: none;
+    }
+    button {
+      padding: 10px;
+      font-size: 20px;
+      border: 3px solid rgb(223, 148, 10);
+      border-radius: 10px;
+      cursor: pointer;
+      min-width: 100px;
+      transition: all 0.3s ease-in-out;
+      background-color: unset;
+      .fa-arrow-left,
+      .fa-arrow-right {
+        color: rgb(226, 19, 116);
+      }
+      &:hover {
+        background-color: rgb(223, 148, 10);
+        .fa-arrow-left,
+        .fa-arrow-right {
+          color: white;
+        }
+      }
+    }
+  }
+}
+.spinner{
+  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

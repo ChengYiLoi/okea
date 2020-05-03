@@ -1,0 +1,275 @@
+@import "./styles/colors";
+@import "./styles/nav";
+@import "./styles/checkout";
+@import "./styles/items";
+@import "./styles//item";
+@import "./styles/cart";
+@import "./styles/_guestForm";
+@import "./styles//account";
+
+#fill {
+  height: 100vh;
+}
+#root {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+  :focus {
+    outline: none;
+  }
+}
+
+a {
+  &:hover {
+    color: $grey !important;
+    text-decoration: none !important;
+  }
+}
+.disableScroll {
+  overflow: hidden;
+}
+button {
+  background-color: rgb(240, 161, 72);
+  border: 0.5px solid rgb(240, 161, 72);
+  border-radius: 10px !important;
+  cursor: pointer;
+  color: white;
+  padding: 15px;
+  outline: none;
+  div {
+    background-color: inherit;
+  }
+  &:focus {
+    outline: none !important;
+  }
+}
+.fa {
+  background-color: inherit;
+}
+#navLogo {
+  width: 50px;
+}
+
+.back > button {
+  transition: background-color 0.3s linear;
+  div {
+    padding: 5px 15px;
+  }
+  &:hover {
+    background-color: orangered !important;
+  }
+}
+
+.hide {
+  display: none;
+}
+.disabled {
+  opacity: 0.5;
+  background-color: rgb(233, 92, 10) !important;
+  border-color: rgb(233, 92, 10) !important;
+  cursor: unset !important;
+}
+.center {
+  justify-content: center !important;
+}
+.processed {
+  background-color: $green;
+  border-color: $green;
+}
+.orangeButton > button {
+  transition: all 0.3s linear;
+}
+.loginButton {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navSection .navLinks {
+    width: 90vw;
+  }
+  .itemWrapper {
+    width: 80vw;
+    .back {
+      font-size: inherit;
+      width: 28%;
+    }
+    #increment,
+    #decrement {
+      font-size: 20px;
+      padding: 12px 16px;
+    }
+    #addToCart {
+      font-size: 22px;
+    }
+  }
+  .mainWrapper {
+    width: 80vw;
+  }
+  .itemInformation {
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .cartWrapper {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .itemWrapper .informationSection form button:hover {
+    background-color: orangered;
+    border: 0.5px solid orangered;
+  }
+
+  .orangeButton > button:hover {
+    background-color: $lightBlue;
+    border: 0.5px solid $lightBlue;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .itemWrapper {
+    width: 90vw;
+  }
+  .navSection > .navLinks {
+    width: 95vw;
+  }
+  .mainWrapper .itemContent .itemCard .itemInformation .shortDescription {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #navLogo {
+    width: 42px;
+  }
+  .mainWrapper {
+    width: 65vw;
+  }
+  .mainWrapper .itemContent {
+    grid-template-columns: 1fr;
+  }
+  .mainWrapper .pageNavigation {
+    padding: 50px 0px 20px;
+    justify-content: space-between;
+  }
+  .logo {
+    padding-right: 5px;
+    a > span {
+      display: none;
+    }
+  }
+  .itemWrapper {
+    margin: 10px auto 0px;
+  }
+  .itemWrapper .itemContent {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "input"
+      "description";
+    img {
+      width: 90%;
+    }
+  }
+  .itemWrapper .informationSection form .counter {
+    margin: 0px auto;
+    width: 100%;
+    #decrement,
+    #increment {
+      font-size: 30px;
+      padding: 6px 32px;
+    }
+  }
+  #addToCart {
+    width: 100%;
+  }
+  .cartWrapper .itemCartWrapper .itemDescription {
+    padding: 10px 0px 0px 30px;
+  }
+  .cartWrapper .itemCartWrapper #removeItem {
+    height: 36px;
+    width: 36px;
+  }
+  .cartWrapper > a > .back {
+    font-size: 12px;
+  }
+  .cartWrapper .total button,
+  .cartWrapper .total i {
+    font-size: 14px;
+  }
+  .cartWrapper .deliverySection {
+    font-size: 13px;
+  }
+  .options {
+    min-width: 350px;
+  }
+  .guestWrapper {
+    width: 80%;
+    form > button {
+      width: 80%;
+    }
+  }
+  .checkoutInfo .checkoutForm {
+    max-width: 80%;
+  }
+  .checkoutInfo .checkoutForm .creditCardInput .cardNumber input,
+  .checkoutInfo .checkoutForm .creditCardInput .expiryDate input,
+  .checkoutInfo .checkoutForm .creditCardInput .securityCode input {
+    font-size: 20px;
+  }
+  // .checkoutInfo .checkoutForm .creditCardInput .expiryDate i {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+  .checkoutInfo .checkoutForm .creditCardInput .expiryDate i select,
+  .checkoutInfo .checkoutForm .creditCardInput .expiryDate i option,
+  .checkoutInfo .checkoutForm .creditCardInput .expiryDate i span {
+    font-size: 20px;
+  }
+  .summaryWrapper {
+    width: 90%;
+    text-align: center;
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .summaryWrapper .infoWrapper .accountInfo {
+    font-size: 24px;
+  }
+  .summaryWrapper .infoWrapper .accountInfo span {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .accountInfo > button {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .summaryWrapper .infoWrapper .accountInfo span {
+    font-size: 12px;
+  }
+  .emptyCart{
+    h1{
+      font-size: 24px;
+    }
+    a{
+      width: 80%;
+     button{
+       font-size: 16px;
+       padding: 15px;
+     }
+    }
+  }
+}

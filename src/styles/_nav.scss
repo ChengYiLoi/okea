@@ -1,0 +1,33 @@
+#okea{
+    margin-right: auto;
+}
+.navSection{
+    padding: 20px 0px 20px;
+    background-color: $navBlue;
+    .navLinks{
+        width: 80vw;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+    }
+}
+.logo{
+    background-color: transparent;
+    padding-right: 30px;
+    display: flex;
+    a{
+        display: flex;
+        align-items: center;
+        padding: 0px 6px;
+        background-color: transparent;
+        color: $grey;
+        text-decoration: none;
+        img,span{
+            background-color: transparent;
+            padding: 0px 5px;
+        }
+    }
+
+}
+
