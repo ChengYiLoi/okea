@@ -1,3 +1,5 @@
+Ecommerce built with ReactJS
+
 You can view a live demo over at http://okea-com.stackstaging.com/
 
 To get it running locally:
